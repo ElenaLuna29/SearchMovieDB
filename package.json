@@ -20,7 +20,9 @@
     "url": "https://github.com/ElenaLuna29/SearchMovieDB/issues"
   },
   "homepage": "https://github.com/ElenaLuna29/SearchMovieDB#readme",
-  "dependencies": {},
+  "dependencies": {
+    "docjs": "0.0.1"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.0.1",
