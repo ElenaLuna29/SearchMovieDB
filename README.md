@@ -12,3 +12,4 @@ Open your browser and go to the address http://localhost:8080 and you should see
 
 And to run unit tests run:
 npm install mocha chai sinon
+npm i --save-dev mocha-jsdom
