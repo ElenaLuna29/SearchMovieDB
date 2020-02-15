@@ -1,17 +1,19 @@
 var assert = require('chai').assert;
+var jsdom = require('mocha-jsdom');
 var sinon = require('sinon');
 var search = require('../src/search');
+// var getInputField = require('../src/search').getInputField;
 
-var documentStub;
+var inputFieldStub;
 
 before(function(){
-  documentStub = sinon.stub(document, 'getElementById');
+  // inputFieldStub = sinon.stub(search,'init');
 });
 
 describe("Search Page", function(){
   describe('Listener', function(){
     it('should add listener for enter key press', function(){
-
+      assert.equal(search.init(),'init');
     });
 
     it('should remove listener when page is destroyed', function(){
