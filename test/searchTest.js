@@ -2,12 +2,12 @@ var assert = require('chai').assert;
 var jsdom = require('mocha-jsdom');
 var sinon = require('sinon');
 var search = require('../src/search');
-// var getInputField = require('../src/search').getInputField;
 
-var inputFieldStub;
+
+var addEventListenerStub;
 
 before(function(){
-  // inputFieldStub = sinon.stub(search,'init');
+  addEventListenerStub = sinon.stub(search.addEventListener,'addEventListener');
 });
 
 describe("Search Page", function(){

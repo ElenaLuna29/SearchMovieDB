@@ -1,27 +1,34 @@
-var Search = function(){
-  this.inputField;
-};
+var search = function(){
+  var inputField;
 
-Search.prototype.init = function(){
-  this.inputField = this.getInputField();
-};
+  var onInputEventHandler = function(event){
+    console.log("ON INPUT ", event);
+    if(event && event.key === 'Enter'){
+      console.log("make search request");
+    }
+  };
 
-Search.prototype.getInputField = function(){
-  return document.getElementById('inputField');
-};
+  var init = function(){
+    inputField = getInputField();
+    addEventListener();
+  };
 
-Search.prototype.addEventListener = function(){
-    this.inputField.addEventListener('input',onInputEventHandler,true);
-};
+  var getInputField = function(){
+    console.log("getInputField");
+    return document.getElementById('inputField');
+  };
 
-var onInputEventHandler = function(event){
-  console.log("ON INPUT ");
-};
+  var addEventListener = function(){
+    inputField.addEventListener('keyup', onInputEventHandler,true);
+
+    console.log("addEventListener ", inputField);
+  };
+
+  init();
+
+}();
 
 
-let search = new Search();
-search.init();
-search.addEventListener();
-// search.init();
+console.log("NEW SEARCH");
 
 // module.exports = search;
