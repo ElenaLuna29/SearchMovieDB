@@ -1,0 +1,29 @@
+{
+  "name": "SearchMovieDB",
+  "version": "1.0.0",
+  "description": "Search page for The MovieDB",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElenaLuna29/SearchMovieDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElenaLuna29/SearchMovieDB/issues"
+  },
+  "homepage": "https://github.com/ElenaLuna29/SearchMovieDB#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1",
+    "sinon": "^8.1.1"
+  }
+}
