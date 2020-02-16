@@ -1,0 +1,8 @@
+--require @babel/register
+--require jsdom-global/register
+--require mock-css-modules
+--require ./config/mocha/setupTests.js
+--recursive
+--exit
+test/searchTest.js
+test/services/request.js

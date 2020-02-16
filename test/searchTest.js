@@ -4,23 +4,7 @@ var sinon = require('sinon');
 var search = require('../src/search');
 
 
-var addEventListenerStub;
-
-before(function(){
-  addEventListenerStub = sinon.stub(search.addEventListener,'addEventListener');
-});
-
 describe("Search Page", function(){
-  describe('Listener', function(){
-    it('should add listener for enter key press', function(){
-      assert.equal(search.init(),'init');
-    });
-
-    it('should remove listener when page is destroyed', function(){
-
-    });
-  });
-
   describe('keyword validation', function(){
     it('should check keyword is not empty string', function(){
 

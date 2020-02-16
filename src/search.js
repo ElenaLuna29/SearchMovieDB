@@ -1,34 +1,29 @@
 var search = function(){
-  var inputField;
+
+  console.log("NEW SEARCH");
+  let inputField = null;
+  let request = null;
+  let publicSearchMethods = {};
 
   var onInputEventHandler = function(event){
     console.log("ON INPUT ", event);
     if(event && event.key === 'Enter'){
-      console.log("make search request");
+      let keyword = inputField.value;
+      console.log("SENDING REQUEST ", keyword);
+      request = new Request(SEARCH_URL, {'keyword': keyword});
     }
-  };
-
-  var init = function(){
-    inputField = getInputField();
-    addEventListener();
-  };
-
-  var getInputField = function(){
-    console.log("getInputField");
-    return document.getElementById('inputField');
   };
 
   var addEventListener = function(){
     inputField.addEventListener('keyup', onInputEventHandler,true);
-
     console.log("addEventListener ", inputField);
   };
 
-  init();
+  publicSearchMethods.init = function(){
+    inputField = document.getElementById('inputField');
+    addEventListener();
+  };
 
-}();
+  return publicSearchMethods;
 
-
-console.log("NEW SEARCH");
-
-// module.exports = search;
+};
